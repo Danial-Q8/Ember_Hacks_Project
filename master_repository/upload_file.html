@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drag & Drop File Upload</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f8f9fa;
+    }
+
+    .upload-box {
+      width: 350px;
+      height: 200px;
+      border: 2px dashed #6c757d;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #6c757d;
+      background-color: white;
+      cursor: pointer;
+      transition: border-color 0.3s, background-color 0.3s;
+    }
+
+    .upload-box.dragover {
+      border-color: #FA8072;
+      background-color: #e9f3ff;
+      color: #007bff;
+    }
+
+    .file-name {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="upload-box" id="uploadBox">
+    <p>Click or drag a file here to upload</p>
+    <input type="file" id="fileInput" />
+    <div class="file-name" id="fileName"></div>
+    <p id="uploadBtn">Upload and Detect Year</p>
+    <p id="result"></p>
+  </div>
+
+  <!-- Link your JavaScript file -->
+  <script src="file_processor2.0.js"></script>
+</body>
+</html>
