@@ -1,0 +1,5 @@
+
+{
+  "name": "Course File Organizer",
+  "description": "An interactive web application to browse university course codes. Users can select a course from a filterable dropdown to view a dedicated page with yearly folders from 2015 to 2025, designed for organizing course materials like PDFs."
+}

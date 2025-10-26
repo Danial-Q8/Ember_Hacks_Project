@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Course Dropdown</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="dropdown">
+    <button class="dropbtn" id="toggleBtn" aria-haspopup="listbox" aria-expanded="false">
+      Courses ▾
+    </button>
+
+    <div id="myDropdown" class="dropdown-content" role="dialog" aria-modal="true">
+      <div class="search-wrap">
+        <input
+          type="text"
+          placeholder="Search courses…"
+          id="myInput"
+          aria-label="Search courses"
+          autocomplete="off"
+        />
+      </div>
+
+      <div id="list" class="list" role="listbox" aria-labelledby="toggleBtn"></div>
+
+      <div class="footer">
+        <span id="count">0 items</span>
+        <span id="status"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
