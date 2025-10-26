@@ -51,9 +51,10 @@ app.post("/upload", upload.single("file"), async (req, res) => {
     console.log("📄 Extracted text (first 500 chars):", text.slice(0, 500));
 
     const year = await findYear(text);
+    
     console.log("📆 Gemini detected year:", year);
 
-    res.json({ year });
+    res.json({ year});
   } catch (err) {
     console.error("❌ Error:", err);
     res.status(500).json({ error: "Error processing file" });
